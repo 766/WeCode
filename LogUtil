@@ -1,0 +1,66 @@
+import android.util.Log;
+
+/**
+ * 调试工具类
+ */
+
+public class LogUtil {
+
+	private static final String KEY = "--Main--";
+	public static final boolean FLAG = true; // 测试true,上线false
+
+	public static void i(Object message) {
+		if (FLAG) {
+			Log.i(KEY, message.toString());
+		}
+	}
+
+	public static void e(Object message) {
+		if (FLAG) {
+			Log.e(KEY, message.toString());
+		}
+	}
+
+	public static void d(Object message) {
+		if (FLAG) {
+			Log.d(KEY, message.toString());
+		}
+	}
+
+	public static void w(Object message) {
+		if (FLAG) {
+			Log.w(KEY, message.toString());
+		}
+	}
+
+	public static void w(Object message, Throwable tr) {
+		if (FLAG) {
+			Log.w(KEY, message.toString(), tr);
+		}
+	}
+
+	public static void i(Object obj, Object message) {
+		if (FLAG) {
+			Log.i(obj.getClass().getSimpleName(), message.toString());
+		}
+	}
+
+	public static void e(Object obj, Object message) {
+		if (FLAG) {
+			Log.e(obj.getClass().getSimpleName(), message.toString());
+		}
+	}
+
+	public static void d(Object obj, Object message) {
+		if (FLAG) {
+			Log.d(obj.getClass().getSimpleName(), message.toString());
+		}
+	}
+
+	public static void w(Object obj, Object message) {
+		if (FLAG) {
+			Log.w(obj.getClass().getSimpleName(), message.toString());
+		}
+	}
+
+}
